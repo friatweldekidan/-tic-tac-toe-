@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const cells = document.querySelectorAll('.cell');
-    const headingFirst = document.querySelector('.heading-first');
+    const statusText = document.querySelector('h1');
     const playAgainButton = document.querySelector('button');
     let currentPlayer = 'X';
     let gameActive = true;
@@ -28,19 +28,19 @@ document.addEventListener('DOMContentLoaded', () => {
         clickedCell.innerText = currentPlayer;
 
         if (checkWin()) {
-            headingFirst.innerText = `Player ${currentPlayer} has won!`;
+            statusText.innerText = `Player ${currentPlayer} has won!`;
             gameActive = false;
             return;
         }
 
         if (gameState.every(cell => cell !== '')) {
-            headingFirst.innerText = 'Draw!';
+            statusText.innerText = 'Draw!';
             gameActive = false;
             return;
         }
 
         currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
-        headingFirst.innerText = `Player ${currentPlayer} to move`;
+        statusText.innerText = `Player ${currentPlayer} to move`;
     }
 
     function checkWin() {
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
         gameActive = true;
         currentPlayer = 'X';
         gameState.fill('');
-        headingFirst.innerText = `Player ${currentPlayer} to move`;
+        statusText.innerText = `Player ${currentPlayer} to move`;
         cells.forEach(cell => cell.innerText = '');
     }
 

@@ -6,7 +6,7 @@ body {
     height: 100vh;
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #f5f5dc; 
+    background-color: #f5f5dc;
 }
 
 .container {
@@ -18,8 +18,8 @@ body {
 
 .cell-container {
     display: grid;
-    grid-template-columns: repeat(3, 100px);
-    grid-template-rows: repeat(3, 100px);
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(3, auto);
     gap: 10px;
 }
 
@@ -30,20 +30,20 @@ body {
     justify-content: center;
     align-items: center;
     font-size: 2rem;
-    background-color: #deb887;  
-    border: 1px solid #8b4513;  
+    background-color: #deb887;
+    border: 1px solid #8b4513;
     cursor: pointer;
 }
 
 .cell:hover {
-    background-color: #cd853f; 
+    background-color: #cd853f;
 }
 
-.heading-first,
-.heading-last {
+h1,
+h2 {
     margin: 20px;
     text-align: center;
-    color: #8b4513;  
+    color: #8b4513;
 }
 
 button {
@@ -51,12 +51,12 @@ button {
     font-size: 1rem;
     margin-top: 20px;
     cursor: pointer;
-    background-color: #cd853f;  
+    background-color: #cd853f;
     color: white;
     border: none;
     border-radius: 5px;
 }
 
 button:hover {
-    background-color: #8b4513;  
+    background-color: #8b4513;
 }
